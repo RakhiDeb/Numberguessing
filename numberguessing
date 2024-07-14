@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.lang.Math;
+public class main{
+public static void main(String[]args){
+  int answer=(int)(Math.random()*100)+1;
+  Scanner sc= new Scanner(System.in);
+  System.out.println("Hii User!!\nThis is a number guessing game\nYou will get 10 attempts to guess the correct number.");
+  int k=10;
+int guess;
+ for( int j=0;j<5;j++){
+    for( int i=0;i<k;i++){
+System.out.println("Enter the number you have guessed:");
+guess= sc.nextInt();
+if (answer==guess){
+System.out.println("Congratulations you have guessed the correct number!\n"+answer);
+break;
+}else if(answer<=guess && k!=0){
+System.out.println("The number you have guessed is too high!");
+}else if(answer>=guess && k!=0){
+System.out.println("The number you have guessed is too low!");
+}
+if(i==k){
+System.out.println("You ran out of the tries\nThe number was:"+answer);
+}
+}
+}
+}
+}
